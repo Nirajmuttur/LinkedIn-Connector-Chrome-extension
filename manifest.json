@@ -1,0 +1,24 @@
+{
+    "manifest_version": 3,
+    "name": "LinkedIn Auto Connect",
+    "version": "1.0",
+    "description": "Automatically send connection requests on LinkedIn search results.",
+    "permissions": [
+        "activeTab",
+        "scripting"
+    ],
+    "content_scripts": [
+      {
+        "matches": ["*://www.linkedin.com/search/results/people/*"],
+        "js": ["content.js"]
+      }
+    ],
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "assets/icon16.png",
+        "48": "assets/icon48.png",
+        "128": "assets/icon128.png"
+      }
+    }
+  }
